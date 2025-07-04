@@ -1,9 +1,9 @@
 <?php
 
-class Secret extends Controller {
+class Reminders extends Controller {
 
     public function index() {        
-        $this->view('secret/index');
+        $this->view('reminders/index');
         // checked and confirmed
     }
 
