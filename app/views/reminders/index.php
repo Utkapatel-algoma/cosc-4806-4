@@ -15,6 +15,7 @@
                 <?php foreach ($data['reminders'] as $reminder): ?>
                     <p>
                         <?php echo htmlspecialchars($reminder['subject']); ?>
+                        <a href="/reminders/show/<?php echo htmlspecialchars($reminder['id']); ?>">view</a>
                         <a href="/reminders/update/<?php echo htmlspecialchars($reminder['id']); ?>">update</a>
                         <a href="/reminders/delete/<?php echo htmlspecialchars($reminder['id']); ?>">delete</a>
                     </p>

@@ -18,7 +18,7 @@ class Reminders extends Controller {
 
             if (!empty($subject)) {
                 $reminder = $this->model('Reminder');
-                $reminder->add_reminder(1, $subject); // User ID is hardcoded as 1 for now
+                $reminder->add_reminder(1, $subject); 
                 header('Location: /reminders');
                 exit();
             } else {
@@ -31,6 +31,13 @@ class Reminders extends Controller {
         }
     }
 
+    public function show($id = '') {
+        // This method will display a single reminder
+        $reminder = $this->model('Reminder');
+        $single_reminder = $reminder->get_reminder_by_id($id);
+        $this->view('reminders/show', ['reminder' => $single_reminder]);
+    }
+
     public function update($id = '') {
         $reminder = $this->model('Reminder');
         $single_reminder = $reminder->get_reminder_by_id($id);
@@ -38,26 +45,20 @@ class Reminders extends Controller {
     }
 
     public function saveUpdate() {
-        // This method will handle the form submission from update.php
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = $_POST['id'] ?? '';
             $subject = $_POST['subject'] ?? '';
 
             if (!empty($id) && !empty($subject)) {
                 $reminder = $this->model('Reminder');
-                // Assuming you'll add an update_reminder method to your Reminder model
                 $reminder->update_reminder($id, $subject);
-
-                header('Location: /reminders'); // Redirect back to the reminders list after updating
+                header('Location: /reminders');
                 exit();
             } else {
-                // Handle cases where ID or subject are empty
-                // For now, redirect back to the reminders list
                 header('Location: /reminders');
                 exit();
             }
         } else {
-            // changed code
             header('Location: /reminders');
             exit();
         }
