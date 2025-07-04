@@ -13,5 +13,5 @@ session_start();
 require_once 'core/App.php';
 require_once 'core/Controller.php';
 require_once 'core/config.php';
-require_once 'database.php';
-require_once 'models/User.php'; // ADDED THIS LINE TO INCLUDE THE USER MODEL
+require_once 'core/database.php'; // Corrected path to database.php
+require_once 'models/User.php';

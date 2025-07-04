@@ -1,21 +1,28 @@
-    <?php
+<?php
 
-    class Reminder {
+class Reminder {
 
-        public function __construct() {
+    public function __construct() {
 
-        }
-
-        public function get_all_reminders () {
-            $db = db_connect();
-            $statement = $db->prepare("select * from reminders;");
-            $statement->execute();
-            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-            return $rows;
-        }
-
-        public function update_reminder ($reminder_id) {
-            $db = db_connect();
-            //do update statement
-        }
     }
+
+    public function get_all_reminders () {
+        $db = db_connect();
+        $statement = $db->prepare("select * from reminders;");
+        $statement->execute();
+        $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        // Debugging output removed
+        // echo "<pre>";
+        // echo "Content of \$rows (from model):<br>";
+        // var_dump($rows);
+        // echo "</pre>";
+
+        return $rows;
+    }
+
+    public function update_reminder ($reminder_id) {
+        $db = db_connect();
+        //do update statement
+    }
+}
