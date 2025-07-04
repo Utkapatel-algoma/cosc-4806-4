@@ -2,9 +2,10 @@
 
 class Reminders extends Controller {
 
-    public function index() {        
-        $this->view('reminders/index');
-        // checked and confirmed
+    public function index() {
+        $reminder = $this->model('Reminder');
+        $list_of_reminders = $reminder->get_all_reminders();
+        $this->view('reminders/index', $list_of_reminders);
     }
 
 }
