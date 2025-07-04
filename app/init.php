@@ -1,7 +1,7 @@
 <?php
 
-error_reporting(E_ALL); // ENABLE ALL ERROR REPORTING
-ini_set('display_errors', 1); // DISPLAY ERRORS ON SCREEN
+error_reporting(E_ALL); // ENABLE ALL ERROR
+ini_set('display_errors', 1); // DISPLAY ERRORS
 
 ini_set('session.gc_maxlifetime', 28800);
 ini_set('session.gc_probability', 1);
@@ -13,5 +13,5 @@ session_start();
 require_once 'core/App.php';
 require_once 'core/Controller.php';
 require_once 'core/config.php';
-require_once 'core/database.php'; // Corrected path to database.php
+require_once 'core/database.php'; // Corrected path
 require_once 'models/User.php';

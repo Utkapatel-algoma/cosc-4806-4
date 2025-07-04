@@ -13,11 +13,9 @@ define('CONTROLLERS', ROOT . DS . 'controllers');
 define('LOGS', ROOT . DS . 'logs');
 define('FILES', ROOT . DS . 'files');
 
-// -------------------------------------------------------------
-// NEW DATABASE TABLE
-// -------------------------------------------------------------
+
 define('DB_HOST', '5f8v8.h.filess.io');
 define('DB_USER', 'cosc4806_mousefatup');
-define('DB_PASS', 'Assi2.'); // Confirmed password from your filess.io screenshot
+define('DB_PASS', 'Assi2.'); // Confirmed password 
 define('DB_DATABASE', 'cosc4806_mousefatup');
 define('DB_PORT', '3305');

@@ -57,7 +57,7 @@ class Reminders extends Controller {
                 exit();
             }
         } else {
-            // If not a POST request, redirect to reminders list
+            // changed code
             header('Location: /reminders');
             exit();
         }

@@ -5,7 +5,7 @@ class Create extends Controller {
     }
 
     public function register() {
-        // changes made to adjust consistencey
+        // changes worked
         $user = $this->model('User'); // Changed from new User();
 
         $username = $_POST['username'] ?? '';

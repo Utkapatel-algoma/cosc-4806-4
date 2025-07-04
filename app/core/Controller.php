@@ -8,7 +8,7 @@ class Controller {
     }
 
     public function view ($view, $data = []) {
-        // Extract the data array into individual variables for the view
+        // Extract the data
         extract($data);
         require_once 'app/views/' . $view .'.php';
     }

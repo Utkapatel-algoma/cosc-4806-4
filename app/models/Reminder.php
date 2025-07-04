@@ -38,7 +38,7 @@ class Reminder {
         $statement->bindValue(':subject', $subject, PDO::PARAM_STR);
         $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
-        return $statement->rowCount(); // Returns the number of affected rows
+        return $statement->rowCount(); // Returns the number
     }
 
     public function delete_reminder ($id) {
